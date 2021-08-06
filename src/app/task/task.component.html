@@ -1,0 +1,11 @@
+<div>
+    <b [ngClass]="task.status?'done':''">
+        {{task.title}}
+    </b>
+    <button (click)="editTask(i)">Edit</button>
+    <button (click)="doneTask(i)">{{task.status?"Undo":"Complted"}}</button>
+
+    <span *ngIf="task.status===true">
+        <button (click)="deleteTask(i)">Delete</button>
+    </span> 
+</div>

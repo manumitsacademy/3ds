@@ -1,0 +1,10 @@
+.done{
+    text-decoration: line-through;
+    background-color: lightgreen;
+}
+.betterview{
+    border:1px solid;
+    margin:10px;
+    padding:10px;
+    box-shadow: rgb(134, 138, 134) 10px 10px 30px;
+}

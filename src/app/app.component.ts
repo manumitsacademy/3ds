@@ -6,7 +6,20 @@ import { task } from './task';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  tasks:task[]=[];
+  tasks:task[]=[
+    {
+      title:'veggies',
+      status:false
+    },
+    {
+      title:'car wash',
+      status:true
+    },
+    {
+      title:'recharge tv',
+      status:true
+    }
+  ];
   newtask:task={title:'',status:false};
   editTaskIndex:number=-1;
   addTask(){
