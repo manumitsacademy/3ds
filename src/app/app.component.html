@@ -1,16 +1,6 @@
-<input type="text" [(ngModel)]="newtask.title">
-<button (click)="addTask()" *ngIf="editTaskIndex===-1" 
-[disabled]="newtask.title===''" >Add Task</button>
-<button (click)="updateTask()" *ngIf="editTaskIndex!==-1">Update</button>
-
-
-  <app-task 
-    *ngFor="let task of tasks;let i = index" 
-    [task]="task"
-    [i]="i"
-    (done)="doneTask($event)"
-    (edit)="editTask($event)"
-    (del)="deleteTask($event)"
-  >
-    
-  </app-task>
+<div id="d1">
+  <app-header></app-header>
+  <app-mainarea></app-mainarea>
+  <app-footer></app-footer>
+  <router-outlet></router-outlet>
+</div>

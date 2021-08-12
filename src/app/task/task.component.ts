@@ -1,7 +1,10 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { AbstractControl, FormControl, FormGroup } from '@angular/forms';
 
 import { task } from '../task';
-
+interface syncerror{
+  error:string
+}
 @Component({
   selector: 'app-task',
   templateUrl: './task.component.html',
@@ -13,7 +16,13 @@ export class TaskComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  studentform = new FormGroup({
+    firstname:new FormControl('',[this.checkfirstname],[])
+  });
+  checkfirstname(x:AbstractControl):syncerror|null{
+    return null;
+  }
+  
   @Input() task:task={title:'',status:false};
   @Input() i:number=-1;
 
